@@ -1,2 +1,2 @@
-# Collection-of-Simple-Flask-Apps
-a Collection of Simple Flask Apps for practice and LULZ
+# Collection-of-Simple-Python-Apps
+a Collection of Simple Flask and Django Apps for practice and LULZ
