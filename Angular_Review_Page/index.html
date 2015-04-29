@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="store">
+	<head>
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	</head>
+	<body ng-controller="StoreController as store">
+		<ul clas="list-group">
+			<li class="list-group-item" ng-repeat="product in store.products">
+
+				<h3 product-title></h3>
+				<img ng-src="{{product.image}}">
+				<!-- pannel section with review description and specification-->
+				<product-panels></product-panels>
+
+			</li>
+		</ul>
+
+		<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>
+
