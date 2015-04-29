@@ -13,6 +13,7 @@
 		};
 	});
 
+	//create directives for product title and panels
 	app.directive("productTitle", function(){
 		return{
 			restrict: "A",
@@ -38,6 +39,7 @@
 		}
 	})
 
+	//hard code some data since i have no backend
 	var gems=[
 	{
 		name:"Dedecahedron",
