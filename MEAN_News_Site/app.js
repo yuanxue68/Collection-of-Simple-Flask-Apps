@@ -23,5 +23,5 @@ app.controller("MainCtrl",["$scope",function($scope){
 
 	$scope.upvote=function(post){
 		post.upvotes++;
-	}
+	};
 }]);
