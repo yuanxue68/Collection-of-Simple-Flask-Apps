@@ -4,6 +4,10 @@ angular.module("News").config(["$routeProvider", function($routeProvider){
 		templateUrl:"templates/body.html",
 		controller:"MainCtrl"
 	})
+	.when("/posts/:id",{
+		templateUrl:"templates/post.html",
+		controller:"PostCtrl"
+	})
 	.otherwise({
 		redirectTo:"/"
 	});

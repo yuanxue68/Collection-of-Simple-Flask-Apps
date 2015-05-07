@@ -1,4 +1,4 @@
-angular.module("News").controller("MainCtrl",["$scope","posts",function($scope,posts){
+angular.module("News").controller("MainCtrl",["$scope","posts", function($scope,posts){
 	$scope.test="Hello world!";
 	$scope.posts=posts.posts;
 
@@ -9,7 +9,11 @@ angular.module("News").controller("MainCtrl",["$scope","posts",function($scope,p
 		$scope.posts.push({
 			title:$scope.title,
 			upvotes: 0,
-			link:$scope.link
+			link:$scope.link,
+			comments:[
+				{author: "Joe", body: "Cool", upvotes: 0},
+				{author: "Bob", body: "Nice", upvotes: 0}
+			]
 		});
 		$scope.title="";
 		$scope.link="";
@@ -18,4 +22,26 @@ angular.module("News").controller("MainCtrl",["$scope","posts",function($scope,p
 	$scope.upvote=function(post){
 		post.upvotes++;
 	};
+}]);
+
+angular.module("News").controller("PostCtrl",["$scope","posts","$routeParams",
+	function($scope, posts, $routeParams){
+	$scope.post=posts.posts[$routeParams.id];
+
+	$scope.addComment=function(){
+		if($scope.body===""){
+			return;
+		}
+		$scope.post.comments.push({
+			body:$scope.body,
+			author: "user",
+			upvotes:0
+		});
+
+	};
+
+	$scope.upvote=function(comment){
+		comment.upvotes++;
+	};
+
 }]);
