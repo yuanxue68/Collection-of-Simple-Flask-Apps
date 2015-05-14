@@ -3,7 +3,7 @@ var gulp=require("gulp"),
 
 
 gulp.task("lint",function(){
-	return gulp.src("./js/**/*.js")
+	return gulp.src("./public/javascipts/**/*.js")
 		.pipe(jshint())
 		.pipe(jshint.reporter("default"));
 });
