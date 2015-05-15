@@ -1,6 +1,7 @@
 angular.module("News").controller("MainCtrl",["$scope","posts", function($scope,posts){
 	$scope.test="Hello world!";
 	$scope.posts=posts.posts;
+	//console.log(posts.getAll());
 
 	$scope.addPost=function(){
 		if(!$scope.title||$scope.title===""){
