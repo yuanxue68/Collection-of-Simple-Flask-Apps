@@ -1,0 +1,12 @@
+.navbar-brand img{
+	max-height: 100%;
+}
+
+h3, h4{
+	text-align: center;
+}
+
+.navbar-default, .navbar-default .container{
+	background-color: #0e3e26;
+	border-color: #0e3e26;
+}
